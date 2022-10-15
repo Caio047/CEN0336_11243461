@@ -9,10 +9,10 @@ Y = sys.argv[2]
 
 # Check whether a and b are positive integer values
 if bool(X.isdigit()) is False or int(X) < 0 or int(X) >= 500:
-	print("ERROR: The first given argument is not a positive integer smaller than 500. Try again.")
+	print("ERRO: O primeiro argumento fornecido nao é um número positivo inteiro menor que 500. Tente novamente.")
 	sys.exit()
 elif bool(Y.isdigit()) is False or int(Y) < 0 or int(Y) >= 500:
-	print("ERROR: The second given argument is not a positive integer smaller than 500. Try again.")
+	print("ERRO: O segundo argumento forncecido não é um número inteiro positivo menor que 500. Tente novamente.")
 	sys.exit()
 
 # Calculate the squared hypothenusa
