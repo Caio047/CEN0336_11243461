@@ -4,6 +4,18 @@
 import sys
 import re
 
+# Check whether the user gave 5 inputs in the command line
+if len(sys.argv) < 6:
+	if len(sys.argv) < 3:
+		print("ERROR: 5 inputs are needed to run this program. However,", len(sys.argv)-1, "was provided.")
+		sys.exit()
+	else:
+        	print("ERROR: 5 inputs are needed to run this program. However,", len(sys.argv)-1, "were provided.")
+        	sys.exit()
+elif len(sys.argv) > 6:
+	print("ERROR: This program accepts up to 5 inputs.", len(sys.argv)-1, "were provided.")
+	sys.exit()
+
 # Assign the user arguments into variables
 DNA = sys.argv[1]
 n1 = sys.argv[2]
@@ -28,6 +40,9 @@ elif bool(n3.isdigit()) is False or int(n3) < 0 or int(n3) > len(DNA):
 elif bool(n4.isdigit()) is False or int(n4) < 0 or int(n4) > len(DNA):
 	print("ERROR: The fifth given argument is not a positive integer smaller than the DNA sequence")
 	sys.exit()
+
+# Convert all characters to uppercase
+DNA = DNA.upper()
 
 # Extract the CDS 1 and check whether it starts with "ATG"
 CDS_1 = DNA[int(n1)-1:int(n2)]
