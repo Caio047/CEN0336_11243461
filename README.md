@@ -1,2 +1,2 @@
 # CEN0336_11243461
-This repository was used to store scripts required to complete the first test of CEN0336.
+A repository for the storage of scripts requested for the completion of the first test from CEN0336.
